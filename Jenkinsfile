@@ -7,7 +7,7 @@ pipeline {
 			stage('First') {
 				steps {
 					sh '''
-						echo "Step Three ${env.VariableT}"
+						echo "Step Three ${VariableT}"
 					'''
 					
 				}
