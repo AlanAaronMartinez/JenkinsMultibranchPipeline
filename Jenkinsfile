@@ -6,7 +6,7 @@ pipeline {
 		stages {
 			stage('First') {
 				steps {
-					env.VariableT= true
+					VariableT= true
 				}
 			}
 			
