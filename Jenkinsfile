@@ -5,10 +5,11 @@ pipeline {
     	  }
 		stages {
 			stage('First') { 
-				steps {
-					script {
+				
 					env.VariableT = true
-					}
+					
+				steps {
+					
 					 
 					sh '''
 						echo "Step Three ${VariableT}"
@@ -17,8 +18,7 @@ pipeline {
 				}
 			}
 			
-			
-	
+		
 			stage('Third') {
 				steps {
 					sh '''
