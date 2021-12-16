@@ -5,10 +5,11 @@ pipeline {
     	  }
 		stages {
 			stage('First') {
-				steps {
-					 environment { 
+				environment { 
         				  VariableT = true
     	 				 }
+				steps {
+					 
 					sh '''
 						echo "Step Three ${VariableT}"
 					'''
