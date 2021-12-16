@@ -6,13 +6,13 @@ pipeline {
 		stages {
 			stage('First') {
 				steps {
-					VariableT= true
+					VariableT = true
 				}
 			}
 			
 			when {
 				
-			 expression { env.VariableT == true }
+			 expression { $VariableT == true }
 				anyOf {
 				stage('Second') {
 					steps {
