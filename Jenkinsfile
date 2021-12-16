@@ -1,25 +1,28 @@
 pipeline {
 	agent any
+	  environment { 
+          VariableT = ''
+    	  }
 		stages {
 			stage('First') {
 				steps {
-					sh '''
-						env.Variable='True'
-					'''
+					env.VariableT= true
 				}
 			}
-
-
-			stage('Second') {
-				when {
-				    expression { env.Variable=='True' }
-				}
-				steps {
-					sh '''
-						echo "Updating Second Stage"
-					'''
-				}
-			} 
+			
+			when {
+				
+			 expression { env.VariableT == true }
+				anyOf {
+				stage('Second') {
+					steps {
+						sh '''
+							echo "Updating Second Stage"
+						'''
+					}
+				} 
+				}	
+			}
 
 			stage('Third') {
 				steps {
