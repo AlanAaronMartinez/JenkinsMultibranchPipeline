@@ -4,11 +4,11 @@ pipeline {
           VariableT = false
     	  }
 		stages {
-			stage('First') {
-				environment { 
-        				  env.VariableT = true
-    	 				 }
+			stage('First') { 
 				steps {
+					script {
+					env.VariableT = true
+					}
 					 
 					sh '''
 						echo "Step Three ${VariableT}"
