@@ -8,7 +8,7 @@ pipeline {
 							
 				steps {
 					script{
-					env.VariableT = true
+					VariableT = true
 					sh '''
 					echo "Step Three ${VariableT}"
 					'''
