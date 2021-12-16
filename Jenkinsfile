@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	  environment { 
-          VariableT = ''
+          VariableT = false
     	  }
 		stages {
 			stage('First') {
