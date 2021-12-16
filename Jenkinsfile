@@ -18,11 +18,11 @@ pipeline {
 			}
 			
 			
-
+	
 			stage('Third') {
 				steps {
 					sh '''
-						echo "Step Three"
+						echo "Step Three ${VariableT}"
 					'''
 				}
 			}
