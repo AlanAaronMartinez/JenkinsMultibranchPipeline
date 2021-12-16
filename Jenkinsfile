@@ -9,7 +9,7 @@ pipeline {
 					sh '''
 						echo "Step Three ${env.VariableT}"
 					'''
-					env.VariableT = true
+					env.VariableT=true
 				}
 			}
 			
