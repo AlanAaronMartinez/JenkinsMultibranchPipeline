@@ -6,10 +6,13 @@ pipeline {
 		stages {
 			stage('First') {
 				steps {
+					 environment { 
+        				  VariableT = true
+    	 				 }
 					sh '''
 						echo "Step Three ${VariableT}"
 					'''
-					VariableT = true
+					
 				}
 			}
 			
