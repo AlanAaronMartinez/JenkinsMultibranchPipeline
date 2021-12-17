@@ -21,15 +21,15 @@ pipeline {
 				stage('Second') {
 					
 				when {
-				
 					expression { ${VariableT} == true }
+				     }
 					steps {
 						sh '''
 							echo "Updating Second Stage ${VariableT}"
 						'''
 					}
 				
-				   }	
+				   
 				}
 			
 		
