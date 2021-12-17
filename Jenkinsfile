@@ -22,7 +22,7 @@ pipeline {
 					
 				when {
 				
-				 expression { VariableT ==~ true }
+					expression { ${VariableT} == true }
 					steps {
 						sh '''
 							echo "Updating Second Stage ${VariableT}"
