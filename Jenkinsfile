@@ -5,26 +5,22 @@ pipeline {
 			stage('First') { 		
 				steps {
 					script{
-					env.VariableT = true
+					env.VariableT = false
 					sh '''
 					echo "Step ONE ${VariableT}"
 					'''
 					}
-					 
 				}
 			}
-				
 				stage('Second') {
 				when {
-					environment name: 'VariableT', value: 'true'
+					environment name: 'VariableT', value: true
 				     }
 					steps {
 						sh '''
 							echo "Updating Second Stage ${VariableT}"
 						'''
 					}
-				
-				   
 				}
 			
 			stage('Third') {
