@@ -5,9 +5,9 @@ pipeline {
 			stage('First') { 		
 				steps {
 					script{
-					env.VariableT = false
+					env.VariableT = true
 					sh '''
-					echo "Step ONE ${VariableT}"
+					echo "First Stage. The variable is: ${VariableT}"
 					'''
 					}
 				}
@@ -18,7 +18,7 @@ pipeline {
 				     }
 					steps {
 						sh '''
-							echo "Updating Second Stage ${VariableT}"
+							echo "Second Stage. The variable is: ${VariableT}"
 						'''
 					}
 				}
@@ -29,7 +29,7 @@ pipeline {
 				     }
 				steps {
 					sh '''
-						echo "Step Three ${VariableT}"
+						echo "Third Stage. The variable is: ${VariableT}"
 					'''
 				}
 			}
