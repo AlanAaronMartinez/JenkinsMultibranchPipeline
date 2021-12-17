@@ -21,7 +21,7 @@ pipeline {
 				stage('Second') {
 					
 				when {
-					expression { VariableT == true }
+					environment name: 'VariableT', value: true
 				     }
 					steps {
 						sh '''
