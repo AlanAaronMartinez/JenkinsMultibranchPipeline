@@ -21,7 +21,7 @@ pipeline {
 				stage('Second') {
 					
 				when {
-					expression { ${VariableT} == true }
+					expression { VariableT == true }
 				     }
 					steps {
 						sh '''
