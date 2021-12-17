@@ -2,22 +2,18 @@ pipeline {
 	agent any
 	  
 		stages {
-			stage('First') { 
-							
+			stage('First') { 		
 				steps {
 					script{
-					env.VariableT = true
+					env.VariableT = false
 					sh '''
 					echo "Step ONE ${VariableT}"
 					'''
 					}
 					 
-					
-					
 				}
 			}
 				
-		
 				stage('Second') {
 					
 				when {
