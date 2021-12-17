@@ -17,7 +17,20 @@ pipeline {
 				}
 			}
 				
-		
+		when {
+				
+			 expression { VariableT == true }
+				anyOf {
+				stage('Second') {
+					steps {
+						sh '''
+							echo "Updating Second Stage ${VariableT}"
+						'''
+					}
+				} 
+				}	
+			}
+			
 		
 			stage('Third') {
 				steps {
